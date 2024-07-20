@@ -1,12 +1,12 @@
 apiVersion: apps/v1
-kind: Deployment # Kubernetes resource kind we are creating
+kind: Deployment
 metadata:
   name: graphicslol-deployment
 spec:
   selector:
     matchLabels:
       app: graphicslol
-  replicas: 2 # Number of replicas that will be created for this deployment
+  replicas: 2
   template:
     metadata:
       labels:
@@ -14,23 +14,23 @@ spec:
     spec:
       containers:
         - name: graphicslol
-          image: unidocker342/graphicslol:latest # Image that will be used to containers in the cluster
+          image: unidocker342/graphicslol:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 5001 # The port that the container is running on in the cluster
-
+            - containerPort: 8080
 
 ---
 
-apiVersion: v1 # Kubernetes API version
-kind: Service # Kubernetes resource kind we are creating
-metadata: # Metadata of the resource kind we are creating
+apiVersion: v1
+kind: Service
+metadata:
   name: graphicslol-ssvc
 spec:
   selector:
     app: graphicslol
   ports:
-    - protocol: "TCP"
-      port: 5001 # The port that the service is running on in the cluster
+    - protocol: TCP
+      port: 5001
+      targetPort: 8080
       nodePort: 31813
-  type: LoadBalancer # type of the service.
+  type: NodePort
