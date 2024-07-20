@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lolgraphics.BFF", "Lolgraph
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lolgraphics.API", "Lolgraphics.API\Lolgraphics.API.csproj", "{3521442D-1938-4A1C-903C-9FBBCFAAE08B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lolgraphics.Tests", "Lolgraphics.Tests\Lolgraphics.Tests.csproj", "{515ED518-7E0C-4693-BE21-C6AE12FFE64A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{3521442D-1938-4A1C-903C-9FBBCFAAE08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3521442D-1938-4A1C-903C-9FBBCFAAE08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3521442D-1938-4A1C-903C-9FBBCFAAE08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{515ED518-7E0C-4693-BE21-C6AE12FFE64A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{515ED518-7E0C-4693-BE21-C6AE12FFE64A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{515ED518-7E0C-4693-BE21-C6AE12FFE64A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{515ED518-7E0C-4693-BE21-C6AE12FFE64A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{99830909-24E6-47FC-94C8-9D432B2CEAF0} = {B25163A5-743E-4930-AB72-6B965A6C0E1A}
 		{4ADF77F8-DDC3-4B91-92F2-99BF5B2649B7} = {B25163A5-743E-4930-AB72-6B965A6C0E1A}
 		{3521442D-1938-4A1C-903C-9FBBCFAAE08B} = {B25163A5-743E-4930-AB72-6B965A6C0E1A}
+		{515ED518-7E0C-4693-BE21-C6AE12FFE64A} = {B25163A5-743E-4930-AB72-6B965A6C0E1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {530CF29A-AA65-4303-93AD-210FAC9E2471}
