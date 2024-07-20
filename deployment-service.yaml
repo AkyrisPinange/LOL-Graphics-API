@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: graphicslol
-          image: unidocker342/graphicslol:lastest # Image that will be used to containers in the cluster
+          image: unidocker342/graphicslol:latest # Image that will be used to containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 5001 # The port that the container is running on in the cluster
