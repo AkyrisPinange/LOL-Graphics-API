@@ -17,7 +17,7 @@ spec:
           image: unidocker342/graphicslol:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 5001
+            - containerPort: 8080
 
 
 ---
@@ -31,8 +31,7 @@ spec:
     app: graphicslol
   ports:
     - protocol: TCP
-      port: 5001
-      targetPort: 5001
-      nodePort: 31813
+      port: 80
+      targetPort: 8080
   type: NodePort
 
