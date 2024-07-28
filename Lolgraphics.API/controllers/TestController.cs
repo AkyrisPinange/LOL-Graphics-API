@@ -1,24 +1,24 @@
-﻿using Adaper.Kafka.Producer;
+﻿using Adapter.Kafka.Producer.Producer;
 using Adapter.Redis.Service;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[controller]")]
-public class MatchesController : ControllerBase
+public class TestController : ControllerBase
 {
-    private readonly ProducerService producerService;
+    private readonly KafkaProducer kafkaProducer;
     private readonly RedisService redisService;
 
-    public MatchesController(ProducerService producerService, RedisService redisService)
+    public TestController(KafkaProducer producerService, RedisService redisService)
     {
         this.redisService = redisService;
-        this.producerService = producerService;
+        this.kafkaProducer = producerService;
     }
 
     [HttpPost("add")]
-    public async Task<IActionResult> AddMatches(CancellationToken cancellationToken)
+    public async Task<IActionResult> AddMatches(string message)
     {
-        await producerService.ProducerAsync(cancellationToken);
+        await kafkaProducer.ProduceAsync(message);
         return Ok();
     }
 
