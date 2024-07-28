@@ -1,12 +1,24 @@
-name: My Workflow
+name: Create Branch from Jira Issue Transition
+
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [jira_issue_transition]
+
 jobs:
-  build:
+  create-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a script
-        run: echo "Hello, world!"
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config user.name "AkyrisPinange"
+          git config user.email "akyris.2903@gmail.com"
+
+      - name: Create new branch
+        run: |
+          ISSUE_KEY=${{ github.event.client_payload.issue_key }}
+          BRANCH_NAME="feature/${ISSUE_KEY}"
+          git checkout -b $BRANCH_NAME
+          git push origin $BRANCH_NAME
