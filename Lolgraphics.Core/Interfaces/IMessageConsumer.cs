@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core.Interfaces
 {
-    public class IMessageRepository
+    public interface IMessageConsumer
     {
+        Task StartConsumingAsync(CancellationToken cancellationToken);
+
     }
 }

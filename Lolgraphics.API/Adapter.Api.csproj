@@ -11,12 +11,14 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.7" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.28.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Adaper.Kafka\Adapter.Kafka.Producer.csproj" />
     <ProjectReference Include="..\Adapter.Bff\Adapter.Bff.csproj" />
+    <ProjectReference Include="..\Adapter.Mongo\Adapter.Mongo.csproj" />
     <ProjectReference Include="..\Adpater.Redis\Adapter.Redis.csproj" />
     <ProjectReference Include="..\Lolgraphics.Core\Core.csproj" />
   </ItemGroup>
